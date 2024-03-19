@@ -18,7 +18,7 @@
         <ImageView
             style="@style/AboutSection.Logo"
             android:contentDescription="@string/about_logo_content_description"
-            app:srcCompat="@drawable/dialog_logo" />
+            app:srcCompat="@drawable/eh21_logo" />
 
         <TextView
             android:id="@+id/about_session_title_view"

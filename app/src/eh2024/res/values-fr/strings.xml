@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Programme du EH21</string>
+    <string name="app_hardcoded_subtitle">
+         March 29-April01 2024, OTH Regensburg
+    </string>
+    <string name="copyright_logo">
+        EH21: Rabbit Prototyping.
+    </string>
+    <string name="about_logo_content_description">
+        EH21 Unlocked logo
+    </string>
+</resources>

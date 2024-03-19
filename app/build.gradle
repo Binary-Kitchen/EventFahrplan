@@ -19,7 +19,7 @@ android {
     buildToolsVersion = Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 100
+        versionCode 102
         versionName "1.63.2"
         minSdk Android.minSdkVersion
         targetSdk Android.targetSdkVersion
@@ -72,10 +72,12 @@ android {
                     "proguard-rules/proguard-project.txt",
                     "proguard-rules/okhttp3.pro",
                     "proguard-rules/okio.pro"
+            signingConfig signingConfigs.debug
         }
     }
 
     signingConfigs {
+        eh2024
         ccc37c3
         cccamp2023
         jev2022
@@ -85,6 +87,34 @@ android {
     flavorDimensions = [defaultDimension]
 
     productFlavors {
+        eh2024 {
+            dimension defaultDimension
+            applicationId "to.mephis.android.congress.schedule"
+            versionName "${defaultConfig.versionName}-EH21-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=to.mephis.android.congress.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.congress.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://fahrplan.eh21.easterhegg.eu/eh/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '""'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://eh21.easterhegg.eu/"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"OTH Regensburg, Galgenbergstr, 93053 Regensburg"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2024"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "03"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "29"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2024"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "04"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "1"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "true"
+            buildConfigField "String", "C3NAV_URL", '"https://eh21.c3nav.de/"'
+            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "true"
+            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "false"
+            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.eh21.easterhegg.eu/shifts-json-export?key=e13e1f76485a364bed9f8b451cc9dcd41352c56731aa3ebd665cc62747bad7c4"')
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#eh21 #easterhegg2024 #fahrplan"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"mephisto+eh21@mephis.to"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+        }
         ccc37c3 {
             dimension defaultDimension
             applicationId "info.metadude.android.congress.schedule"
