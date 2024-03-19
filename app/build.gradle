@@ -19,7 +19,7 @@ android {
     buildToolsVersion = Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 102
+        versionCode 103
         versionName "1.63.2"
         minSdk Android.minSdkVersion
         targetSdk Android.targetSdkVersion
@@ -110,7 +110,7 @@ android {
             buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "true"
             buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "false"
             buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
-            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.eh21.easterhegg.eu/shifts-json-export?key=e13e1f76485a364bed9f8b451cc9dcd41352c56731aa3ebd665cc62747bad7c4"')
+            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.eh21.easterhegg.eu/shifts-json-export?key=<YOU_APIKEY>"')
             buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#eh21 #easterhegg2024 #fahrplan"'
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"mephisto+eh21@mephis.to"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
